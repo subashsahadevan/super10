@@ -1,0 +1,22 @@
+# Flutter/Dart/Pub
+.dart_tool/
+.packages
+.pub/
+build/
+
+# Flutter generated
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# macOS/Linux/Windows noise
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
