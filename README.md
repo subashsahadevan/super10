@@ -10,19 +10,65 @@
 - Players have 10 seconds to answer each question.
 - A leaderboard ranks players by score.
 
-## Project setup
+## Full cross-platform setup (Android, iOS, Web)
 
-### Prerequisites
+This repository contains helper scripts to install Flutter and bootstrap all target platforms.
 
-- Flutter SDK 3.22+ installed
-- Dart SDK (comes with Flutter)
-
-### Run locally
+### 1) Install Flutter SDK
 
 ```bash
-flutter pub get
-flutter run
+bash scripts/install_flutter.sh
 ```
+
+> Optional: install a pinned version/tag
+>
+> ```bash
+> FLUTTER_REF=3.24.3 bash scripts/install_flutter.sh
+> ```
+
+### 2) Configure this repo for Android + iOS + Web
+
+```bash
+bash scripts/setup_project.sh
+```
+
+This command:
+
+- creates/updates Flutter platform folders (`android/`, `ios/`, `web/`),
+- runs `flutter pub get`,
+- enables web support,
+- runs `flutter doctor -v` for validation.
+
+### 3) Run the app
+
+```bash
+# Web
+flutter run -d chrome
+
+# Android (requires Android SDK/device/emulator)
+flutter run -d android
+
+# iOS (macOS + Xcode required)
+flutter run -d ios
+```
+
+## Platform prerequisites
+
+### Android
+
+- Android Studio (or Android SDK command-line tools)
+- Java 17+
+- At least one emulator or physical device
+
+### iOS
+
+- macOS machine
+- Xcode + Xcode Command Line Tools
+- CocoaPods (`sudo gem install cocoapods`)
+
+### Web
+
+- Chrome/Edge browser installed
 
 ## Current UI scope
 
